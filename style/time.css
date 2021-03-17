@@ -1,0 +1,380 @@
+body {
+   display: grid;
+	grid-template-columns: 1fr; /*hoe meer je fr naast elkaar zet hoe meer columns je naast elkaar krijgt*/
+	margin: 0;
+	grid-row-gap: 5px; /*(top bottom)*/
+	grid-column-gap: 5px; /*(Left Right)*/
+
+	grid-template-areas: 
+		"title"
+		"date" 
+		"mars"
+		"utc" 
+		"gmt"	
+		"cst"
+		"jst"
+		"hamster"
+		"hamster"
+		"empty "
+		"empty"
+		"something"
+		"something"
+		
+
+	;
+}
+
+div {
+    margin: 2%;
+    padding-bottom: 2%;
+}
+
+div:nth-child(4), div:nth-child(3), div:nth-child(2), div:nth-child(5){
+    display: none;
+}
+
+h1 {
+    font-size: 0.8em;
+    margin: 1%;
+    padding-left: 10px;
+    padding-top: 5px;
+    color: white;
+}
+
+h2 {
+    font-size: 1em;
+    text-align: center;
+}
+
+table {
+    font-size: 0.75em;
+}
+
+p {
+    font-size: 0.75em;
+}
+
+.box1 {
+	grid-area: title;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    grid-row-gap: 0;
+    grid-column-gap: 0;
+    margin: 0;
+}
+
+
+.box1 img{
+    float: right;
+    max-width: 100px;
+    margin: 1%;
+    padding-top: 2px;
+}
+
+.box1 h1 {
+    float: left;
+    margin: 1%;
+}
+
+.slide animate {
+    grid-area: hamster;
+    background: none;
+    border: none;
+}
+
+
+.box2 {
+	grid-area: date;
+}
+
+.box2 h2 {
+    font-size: 2em;
+}
+
+.box2 #currentDate{
+    font-size: 1em;
+}
+
+.box3 {
+	grid-area: utc;
+	background-image: url('../images/bigben.png');
+	background-size: 100% 100%;
+	min-height: 100px;
+	
+}
+
+.box4 {
+    grid-area: gmt;
+    background-image: url('../images/berlin.png');
+	background-size: 100% 100%;
+	min-height: 100px;
+}
+
+.box5 {
+    grid-area: mars;
+    background-image: url('../images/mars.png');
+	background-size: 100% 100%;
+	min-height: 100px;
+}
+.box6 {
+    grid-area: cst;
+    text-align: left;
+    background-image: url('../images/houston.png');
+	background-size: 100% 100%;
+	min-height: 100px;
+    
+}
+
+.box7 {
+    grid-area: jst;
+    text-align: left;
+    background-image: url('../images/japan.png');
+	background-size: 100% 100%;
+	min-height: 100px;
+}
+.box8 {
+    grid-area: something;
+    text-align: center;
+    display: none;
+}
+
+.box9 {
+    grid-area: empty;
+    background-image: url('../images/.jpg');
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+    background-size: cover;
+    display: none;
+}
+
+
+
+
+
+
+/* Hamster animation 1*/
+
+
+.slide {
+   width: 90%;
+   position: relative;
+   background: none;
+   border: none;
+//    height: 80vh;
+}
+
+#hamsters .image-rotator{
+   height: 600%;
+   position: relative;
+   background: none;
+   border: none;
+}
+
+#hamsters.animate .image-rotator img{
+   position: absolute;
+   width: 80%;
+   height: 100%;
+   animation: imgRotator 0.45s infinite;
+   background: none;
+   border: none;
+}
+
+
+#hamsters.animate .image-rotator img:nth-child(2){
+   animation-delay: -0.15s;
+}
+
+#hamsters.animate .image-rotator img:nth-child(3){
+   animation-delay: -0.3s;
+}
+
+@keyframes imgRotator {
+   0% {
+      opacity: 0;
+   }
+   17%, 33%{
+      opacity: 1;
+   }
+   50%, 100% {    /* 33 + 17 = 50 */
+      opacity: 0;
+   }
+}
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 480px){
+body {
+   display: grid;
+	grid-template-columns: 1fr 1fr; /*hoe meer je fr naast elkaar zet hoe meer columns je naast elkaar krijgt*/
+	height: 500px;
+	grid-row-gap: 5px; /*(top bottom)*/
+	grid-column-gap: 5px; /*(Left Right)*/
+
+	grid-template-areas: 
+		"title title"
+        
+		"date mars"
+		"utc gmt"	
+		"cst jst"
+		"hamster hamster"
+		"empty empty"
+		"empty empty"
+		"something something"
+
+
+	   ;
+    }
+    
+div:nth-child(2), div:nth-child(5), .box9 {
+    display: initial;
+}
+div {
+    margin: 1%;
+}
+
+h1 {
+    font-size: 1.5em;      
+    }
+
+h2 {
+    font-size: 1.3em;
+}
+
+table {
+    font-size: 1em;
+}
+
+p {
+    font-size: 1em;
+}
+.box1 img {
+        max-width: 200px;
+    }
+    
+    .box2 {
+        font-size: 1em;
+    }
+    
+}
+
+
+@media only screen and (min-width: 768px){
+body {
+   display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr; /*hoe meer je fr naast elkaar zet hoe meer columns je naast elkaar krijgt*/
+	height: 500px;
+	grid-row-gap: 10px; /*(top bottom)*/
+	grid-column-gap: 10px; /*(Left Right)*/
+
+	grid-template-areas: 
+		"title title title title"
+		"date date mars mars"
+		"utc gmt cst jst"
+		"hamster hamster hamster hamster"
+		"empty empty empty empty"
+		"empty empty empty empty"
+		"something something something something"
+
+	   ;
+    }
+    
+div:nth-child(4), div:nth-child(3){
+    display: initial;
+}
+
+    h1 {
+        font-size: 2.0em;
+    }
+
+    
+    h2 {
+     font-size: 1.5em;
+    }
+
+    table {
+     font-size: 1em;
+    }
+
+    p {
+     font-size: 1em;
+    }
+    .box1 img {
+        max-width: 250px;
+    }
+    
+    .box2 {
+        height: 200px;
+    }
+    
+}
+
+
+@media only screen and (min-width: 1366px){
+body {
+   display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; /*hoe meer je fr naast elkaar zet hoe meer columns je naast elkaar krijgt*/
+	height: 500px;
+	grid-row-gap: 10px; /*(top bottom)*/
+	grid-column-gap: 10px; /*(Left Right)*/
+
+	grid-template-areas: 
+		"title title title title title title title"
+		"date date date mars mars mars mars"
+		"date date date utc utc cst cst"
+		"date date date gmt gmt jst jst"
+		
+		"hamster hamster hamster hamster hamster hamster hamster"
+		"empty empty empty empty empty empty empty"
+		"something something something something something something something"
+
+	   ;
+    }
+    
+    h1 {
+        font-size: 2.0em;
+    }
+    
+    h2 {
+     font-size: 1.5em;
+    }
+
+    table {
+     font-size: 1em;
+    }
+
+    p {
+     font-size: 1em;
+    }
+    
+    .box1 img {
+        max-width: 300px;
+    }
+    
+    .box2 {
+        height: 500px;
+        font-size: 3em;
+    }
+    
+    aside {
+        font-size: 1.5em;
+    }
+    #hamsters {
+        left: 140%;
+        width: 200%;
+    }
+    
+    .box5 {
+        margin: 0;
+        background-size: 100% 150%;
+    }
+   
+
+}

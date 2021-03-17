@@ -1,0 +1,65 @@
+/* daytime */
+
+
+body {
+    background-image: url("images/daytime.jpg");
+    background-repeat: no-repeat;
+    background-size: 500% 100%;
+    font-family: 'silom', 'arial';
+    font-weight: bold;
+}
+
+
+@media only screen and (min-width: 480px){
+    body{
+        background-size: 100% 200%;
+    }
+}
+
+h1,div {
+    color: white;
+    
+}
+
+div {
+    padding: 2%;
+    background-color: rgba(0, 19, 53, 0.75);
+    text-shadow: 2px 2px #000000;
+}
+
+
+h2 {
+    padding-left: 2%;
+    text-shadow: 2px 2px #000000;
+}
+
+
+.box1 {
+   background-color: rgba(0, 19, 53, 1);
+   text-shadow: none;
+}
+
+
+
+
+/* SEASON CHANGE */
+
+.winter {
+    background-image: url('images/winter.jpg');
+    background-size: 100% 100%; 
+}
+
+.spring {
+    background-image: url('images/spring.jpg');
+    background-size: 100% 100%; 
+}
+
+.summer{
+    background-image: url('images/summer.jpg');
+    background-size: 100% 100%; 
+}
+
+.autumn {
+    background-image: url('images/autumn.jpg');
+    background-size: 100% 100%; 
+}
